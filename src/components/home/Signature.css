@@ -1,0 +1,153 @@
+.signature {
+  padding-block: var(--space-6);
+}
+
+.signature__stage {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: clamp(28rem, 70vw, 36rem);
+  overflow: hidden;
+  background: var(--burgundy-deep);
+}
+
+.signature__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transform: scale(1.06);
+  filter: saturate(0.92);
+  animation: signature-drift 18s ease-in-out infinite alternate;
+}
+
+.signature__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(79, 31, 42, 0.88) 0%,
+      rgba(79, 31, 42, 0.72) 42%,
+      rgba(79, 31, 42, 0.28) 100%
+    );
+  z-index: 1;
+}
+
+html[dir='ltr'] .signature__veil {
+  background:
+    linear-gradient(
+      255deg,
+      rgba(79, 31, 42, 0.88) 0%,
+      rgba(79, 31, 42, 0.72) 42%,
+      rgba(79, 31, 42, 0.28) 100%
+    );
+}
+
+.signature__panel {
+  position: relative;
+  z-index: 2;
+  padding-block: var(--space-7);
+  max-width: 34rem;
+  color: var(--white);
+}
+
+.signature__eyebrow {
+  color: var(--gold-soft) !important;
+}
+
+.signature__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.85rem);
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+  text-wrap: balance;
+}
+
+.signature__body {
+  color: rgba(255, 252, 248, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: var(--space-6);
+  max-width: 28rem;
+}
+
+.signature__portrait {
+  display: none;
+  margin: 0;
+}
+
+@keyframes signature-drift {
+  from {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+@media (min-width: 900px) {
+  .signature {
+    padding-block: var(--space-8);
+  }
+
+  .signature__stage {
+    width: min(100% - 3.5rem, var(--max-width));
+    margin-inline: auto;
+    grid-template-columns: 1fr 0.9fr;
+    min-height: 34rem;
+    border: 1px solid rgba(196, 165, 116, 0.28);
+  }
+
+  .signature__bg {
+    display: none;
+  }
+
+  .signature__veil {
+    display: none;
+  }
+
+  .signature__stage {
+    background:
+      linear-gradient(135deg, #5a2532 0%, var(--burgundy-deep) 55%, #3a1620 100%);
+  }
+
+  .signature__panel {
+    padding-inline: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .signature__portrait {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    z-index: 2;
+  }
+
+  .signature__portrait-img {
+    width: min(100%, 340px);
+    height: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    animation: soft-float 8s ease-in-out infinite;
+    transition: transform 0.7s var(--ease-out);
+  }
+
+  .signature__portrait:hover .signature__portrait-img {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signature__bg,
+  .signature__portrait-img {
+    animation: none;
+  }
+
+  .signature__portrait:hover .signature__portrait-img {
+    transform: none;
+  }
+}

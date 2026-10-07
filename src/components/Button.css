@@ -1,0 +1,104 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.8rem 1.65rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background var(--duration) var(--ease-out),
+    color var(--duration) var(--ease-out),
+    border-color var(--duration) var(--ease-out),
+    transform var(--duration) var(--ease-out),
+    box-shadow var(--duration) var(--ease-out);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background: var(--burgundy);
+  color: var(--white);
+  box-shadow: 0 10px 28px rgba(110, 44, 58, 0.22);
+}
+
+.btn--primary:hover {
+  background: var(--burgundy-deep);
+  box-shadow: 0 14px 34px rgba(110, 44, 58, 0.3);
+}
+
+.btn--glow {
+  position: relative;
+  overflow: hidden;
+  animation: cta-glow 3.4s ease-in-out infinite;
+}
+
+.btn--glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 252, 248, 0.22) 48%,
+    transparent 66%
+  );
+  transform: translateX(-120%);
+  animation: btn-sheen 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn--glow,
+  .btn--glow::after {
+    animation: none;
+  }
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--burgundy);
+  border-color: var(--border-strong);
+}
+
+.btn--secondary:hover {
+  border-color: var(--burgundy);
+  background: var(--burgundy-mist);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--burgundy);
+  border-color: var(--border);
+  min-height: 2.6rem;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.btn--ghost:hover {
+  border-color: var(--gold);
+  color: var(--burgundy-deep);
+  background: var(--bg-elevated);
+}
+
+@media (max-width: 480px) {
+  .btn--full-mobile {
+    width: 100%;
+  }
+}

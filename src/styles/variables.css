@@ -1,0 +1,74 @@
+:root {
+  /* Brand palette — Thread & Vow */
+  --ivory: #f9f5ee;
+  --cream: #f3ece3;
+  --champagne: #e8dcc8;
+  --beige: #d9cbb8;
+  --taupe: #8f7f72;
+  --burgundy: #6e2c3a;
+  --burgundy-soft: #8a3f4e;
+  --burgundy-deep: #4f1f2a;
+  --burgundy-mist: rgba(110, 44, 58, 0.1);
+  --gold: #c4a574;
+  --gold-soft: #d4bc96;
+  --gold-deep: #9a7d52;
+  --sage: #8a9a7a;
+  --charcoal: #2a2420;
+  --charcoal-soft: #3d3530;
+  --white: #fffcf8;
+  --black: #1a1614;
+
+  /* Semantic */
+  --bg: var(--ivory);
+  --bg-elevated: var(--white);
+  --bg-muted: var(--cream);
+  --bg-warm: var(--champagne);
+  --text: var(--burgundy-deep);
+  --text-muted: var(--taupe);
+  --accent: var(--burgundy);
+  --accent-soft: var(--burgundy-soft);
+  --accent-deep: var(--burgundy-deep);
+  --accent-gold: var(--gold);
+  --border: rgba(110, 44, 58, 0.14);
+  --border-strong: rgba(196, 165, 116, 0.5);
+  --shadow-soft: 0 12px 40px rgba(79, 31, 42, 0.07);
+  --shadow-card: 0 18px 50px rgba(79, 31, 42, 0.1);
+
+  /* Typography — language-specific overrides on [dir] */
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+
+  /* Layout */
+  --max-width: 1180px;
+  --nav-height: 4.75rem;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration: 360ms;
+  --duration-slow: 700ms;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+}
+
+html[dir='rtl'] {
+  --font-display: 'Noto Naskh Arabic', 'Times New Roman', serif;
+  --font-body: 'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+}
+
+html[dir='ltr'] {
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+}

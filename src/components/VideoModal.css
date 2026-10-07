@@ -1,0 +1,48 @@
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(26, 16, 18, 0.78);
+  animation: fade-in 0.25s var(--ease-out);
+}
+
+.video-modal__dialog {
+  position: relative;
+  width: min(100%, 420px);
+  background: var(--ivory);
+  padding: 0.7rem;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.video-modal__player {
+  display: block;
+  width: 100%;
+  max-height: min(82vh, 760px);
+  background: #1a1012;
+  object-fit: contain;
+}
+
+.video-modal__close {
+  position: absolute;
+  top: 0.85rem;
+  inset-inline-end: 0.85rem;
+  z-index: 2;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(249, 245, 238, 0.92);
+  color: var(--burgundy-deep);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-modal__close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}

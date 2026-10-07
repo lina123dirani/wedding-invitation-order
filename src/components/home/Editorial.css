@@ -1,0 +1,51 @@
+.editorial {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(243, 236, 226, 0.55) 40%,
+    transparent 100%
+  );
+}
+
+.editorial__inner {
+  max-width: 42rem;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.editorial__rule {
+  width: 48px;
+  height: 1px;
+  margin: 0 auto var(--space-5);
+  background: var(--burgundy);
+  transform-origin: center;
+  animation: rule-draw 1.2s var(--ease-out) both;
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial__rule {
+    animation: none;
+  }
+}
+
+.editorial__title {
+  margin-bottom: var(--space-5);
+}
+
+.editorial__body {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  font-weight: 400;
+}
