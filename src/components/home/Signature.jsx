@@ -2,6 +2,7 @@ import Button from '../Button'
 import ScrollReveal from '../ScrollReveal'
 import { useLanguage } from '../../i18n/LanguageContext'
 import productImage from '../../assets/invitation-product.png'
+import { whatsappLink } from '../../utils/whatsapp'
 import './Signature.css'
 
 function Signature() {
@@ -25,7 +26,12 @@ function Signature() {
               {t('signature.title')}
             </h2>
             <p className="signature__body">{t('signature.body')}</p>
-            <Button href="#cta" className="btn--glow btn--full-mobile">
+            <Button
+              href={whatsappLink(t('whatsapp.message'))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn--glow btn--full-mobile"
+            >
               {t('signature.cta')}
             </Button>
           </ScrollReveal>

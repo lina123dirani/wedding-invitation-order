@@ -13,6 +13,9 @@ export const translations = {
       ar: 'العربية',
       en: 'EN',
     },
+    whatsapp: {
+      message: 'مرحباً، أرغب بطلب تصميم دعوة من THREAD & VOW 🤍',
+    },
     hero: {
       title: 'دعوتكم تبدأ من هنا',
       subtitle:
@@ -91,6 +94,9 @@ export const translations = {
     lang: {
       ar: 'العربية',
       en: 'EN',
+    },
+    whatsapp: {
+      message: 'Hello, I would like to request an invitation design from THREAD & VOW.',
     },
     hero: {
       title: 'Your story begins here',

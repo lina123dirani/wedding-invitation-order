@@ -1,6 +1,7 @@
 import Button from '../Button'
 import { useLanguage } from '../../i18n/LanguageContext'
 import productImage from '../../assets/invitation-product.png'
+import { whatsappLink } from '../../utils/whatsapp'
 import './Hero.css'
 
 function Hero() {
@@ -16,7 +17,12 @@ function Hero() {
           </h1>
           <p className="hero__subtitle reveal reveal-delay-2">{t('hero.subtitle')}</p>
           <div className="hero__actions reveal reveal-delay-3">
-            <Button href="#cta" className="btn--full-mobile btn--glow">
+            <Button
+              href={whatsappLink(t('whatsapp.message'))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn--full-mobile btn--glow"
+            >
               {t('hero.primaryCta')}
             </Button>
             <Button href="#designs" variant="secondary" className="btn--full-mobile">

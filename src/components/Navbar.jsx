@@ -3,6 +3,7 @@ import Button from './Button'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useLanguage } from '../i18n/LanguageContext'
 import logo from '../assets/logo.png'
+import { whatsappLink } from '../utils/whatsapp'
 import './Navbar.css'
 
 function Navbar() {
@@ -45,7 +46,12 @@ function Navbar() {
 
         <div className="navbar__actions">
           <LanguageSwitcher />
-          <Button href="#cta" className="navbar__cta btn--full-mobile">
+          <Button
+            href={whatsappLink(t('whatsapp.message'))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__cta btn--full-mobile"
+          >
             {t('nav.cta')}
           </Button>
         </div>
@@ -81,7 +87,13 @@ function Navbar() {
         </nav>
         <div className="navbar__mobile-footer">
           <LanguageSwitcher />
-          <Button href="#cta" className="btn--full-mobile" onClick={closeMenu}>
+          <Button
+            href={whatsappLink(t('whatsapp.message'))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn--full-mobile"
+            onClick={closeMenu}
+          >
             {t('nav.cta')}
           </Button>
         </div>
