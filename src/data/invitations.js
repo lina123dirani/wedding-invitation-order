@@ -2,7 +2,7 @@ import blossom from '../assets/examples/blossom.jpg'
 import classic from '../assets/examples/classic.jpg'
 import arch from '../assets/examples/arch.jpg'
 import ray from '../assets/examples/ray.jpg'
-import momentCover from '../assets/invitation-product.png'
+import birthdayCover from '../assets/examples/birthday-cover.png'
 
 export const heirloomExamples = [
   {
@@ -54,13 +54,13 @@ export const momentExamples = [
   },
   {
     id: 'moment',
-    nameAr: 'لحظة الزفاف',
-    nameEn: 'The Moment',
-    nameSv: 'The Moment',
-    descriptionAr: 'فيديو بمظروف وزخرفة وشعار.',
-    descriptionEn: 'Envelope, décor, and logo animation.',
-    descriptionSv: 'Kuvert, dekoration och logotypanimation.',
-    image: momentCover,
+    nameAr: 'عيد ميلاد',
+    nameEn: 'Birthday Invitation',
+    nameSv: 'Födelsedagsinbjudan',
+    descriptionAr: 'دعوة عيد ميلاد متحركة أنيقة.',
+    descriptionEn: 'An elegant animated birthday invitation.',
+    descriptionSv: 'En elegant animerad födelsedagsinbjudan.',
+    image: birthdayCover,
     video: '/examples/moment.mp4',
   },
 ]

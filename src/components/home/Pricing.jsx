@@ -27,7 +27,6 @@ function Pricing() {
           ))}
         </div>
 
-        <p className="pricing__note">{t('pricing.note')}</p>
       </div>
     </section>
   )

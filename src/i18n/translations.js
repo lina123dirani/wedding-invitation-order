@@ -58,7 +58,6 @@ export const translations = {
       eyebrow: 'الأسعار',
       title: 'أسعار واضحة',
       lead: 'عرض لفترة محدودة.',
-      note: 'للطلب تواصلي عبر واتساب.',
       items: [
         {
           name: 'THE HEIRLOOM',
@@ -177,7 +176,6 @@ export const translations = {
       eyebrow: 'Pricing',
       title: 'Clear introductory prices',
       lead: 'Limited-time offer.',
-      note: 'Order via WhatsApp.',
       items: [
         {
           name: 'THE HEIRLOOM',
@@ -297,7 +295,6 @@ export const translations = {
       eyebrow: 'Priser',
       title: 'Introduktionspriser',
       lead: 'Tydliga priser för varje design.',
-      note: 'Beställ via WhatsApp.',
       items: [
         {
           name: 'THE MOMENT',

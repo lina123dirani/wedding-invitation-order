@@ -14,22 +14,31 @@
 .lang-switcher__btn {
   border: none;
   background: transparent;
-  padding: 0.2rem 0.15rem;
+  min-height: 2rem;
+  padding: 0.35rem 0.4rem;
   color: var(--text-muted);
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   cursor: pointer;
-  transition: color var(--duration-fast) ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    color var(--duration-fast) ease,
+    transform var(--duration-fast) ease;
 }
 
 .lang-switcher__btn:hover {
   color: var(--text);
 }
 
+.lang-switcher__btn:active {
+  transform: scale(0.96);
+}
+
 .lang-switcher__btn.is-active {
-  color: var(--text);
+  color: var(--burgundy);
 }
 
 .lang-switcher__btn:focus-visible {

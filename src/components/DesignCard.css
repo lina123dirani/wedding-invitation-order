@@ -23,21 +23,42 @@
   cursor: pointer;
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.35s var(--ease-out),
+    box-shadow 0.35s var(--ease-out);
+}
+
+.design-card__preview:hover {
+  box-shadow: 0 22px 48px rgba(79, 31, 42, 0.16);
+}
+
+.design-card__preview:active {
+  transform: scale(0.985);
 }
 
 .design-card__play {
   position: absolute;
   inset: 50% auto auto 50%;
   transform: translate(-50%, -50%);
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(249, 245, 238, 0.92);
+  background: rgba(249, 245, 238, 0.94);
   color: var(--burgundy);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   box-shadow: 0 8px 20px rgba(79, 31, 42, 0.18);
+  transition:
+    transform 0.35s var(--ease-out),
+    background 0.35s ease;
+}
+
+.design-card__preview:hover .design-card__play {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: var(--white);
 }
 
 .design-card__image {
@@ -45,7 +66,7 @@
   width: 100%;
   aspect-ratio: 3 / 4.15;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   transition: transform 0.7s var(--ease-out);
 }
 
@@ -80,10 +101,20 @@
 
 .design-card__btn {
   margin-top: var(--space-2);
+  touch-action: manipulation;
+}
+
+.design-card__btn:active {
+  transform: scale(0.97);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .design-card:hover .design-card__image {
+  .design-card:hover .design-card__image,
+  .design-card__preview:hover .design-card__play {
     transform: none;
+  }
+
+  .design-card__preview:hover .design-card__play {
+    transform: translate(-50%, -50%);
   }
 }
