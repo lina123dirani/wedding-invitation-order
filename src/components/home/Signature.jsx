@@ -6,7 +6,7 @@ import { whatsappLink } from '../../utils/whatsapp'
 import './Signature.css'
 
 function Signature() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <section className="signature" aria-labelledby="signature-title">
@@ -27,7 +27,7 @@ function Signature() {
             </h2>
             <p className="signature__body">{t('signature.body')}</p>
             <Button
-              href={whatsappLink(t('whatsapp.message'))}
+              href={whatsappLink(t('whatsapp.message'), language)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn--glow btn--full-mobile"

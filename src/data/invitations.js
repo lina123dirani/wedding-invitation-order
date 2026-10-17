@@ -2,14 +2,17 @@ import blossom from '../assets/examples/blossom.jpg'
 import classic from '../assets/examples/classic.jpg'
 import arch from '../assets/examples/arch.jpg'
 import ray from '../assets/examples/ray.jpg'
+import momentCover from '../assets/invitation-product.png'
 
-export const invitations = [
+export const heirloomExamples = [
   {
     id: 'blossom',
     nameAr: 'سارة وسوار',
     nameEn: 'Sara & Suwar',
-    descriptionAr: 'دعوة ناعمة على ضفاف بحيرة الكرز.',
-    descriptionEn: 'A soft lakeside invitation under cherry blossoms.',
+    nameSv: 'Sara & Suwar',
+    descriptionAr: 'دعوة تفاعلية ناعمة.',
+    descriptionEn: 'A soft interactive invitation.',
+    descriptionSv: 'En mjuk interaktiv inbjudan.',
     image: blossom,
     href: 'https://wedding-invitation-luxury-seven.vercel.app/',
   },
@@ -17,8 +20,10 @@ export const invitations = [
     id: 'classic',
     nameAr: 'أليس وأليكس',
     nameEn: 'Alice & Alex',
-    descriptionAr: 'دعوة كلاسيكية بورغندية بتفاصيل فاخرة.',
-    descriptionEn: 'A classic burgundy invitation with rich details.',
+    nameSv: 'Alice & Alex',
+    descriptionAr: 'دعوة كلاسيكية فاخرة.',
+    descriptionEn: 'A classic luxury invitation.',
+    descriptionSv: 'En klassisk lyxinbjudan.',
     image: classic,
     href: 'https://wedding-invitation-classic-ten.vercel.app/',
   },
@@ -26,18 +31,41 @@ export const invitations = [
     id: 'arch',
     nameAr: 'آمال وأحمد',
     nameEn: 'Amal & Ahmad',
-    descriptionAr: 'إطار مطرّز يفتح على مشهد هادئ.',
-    descriptionEn: 'An embroidered frame opening onto a quiet landscape.',
+    nameSv: 'Amal & Ahmad',
+    descriptionAr: 'دعوة بإطار مطرّز أنيق.',
+    descriptionEn: 'An elegant embroidered invitation.',
+    descriptionSv: 'En elegant broderad inbjudan.',
     image: arch,
     href: 'https://wedding-invitation-eight-delta-92.vercel.app/',
   },
+]
+
+export const momentExamples = [
   {
     id: 'ray',
     nameAr: 'راي',
     nameEn: 'Ray',
-    descriptionAr: 'دعوة استقبال صغيرة بتفاصيل لطيفة.',
-    descriptionEn: 'A gentle welcome invitation with soft details.',
+    nameSv: 'Ray',
+    descriptionAr: 'دعوة متحركة قصيرة.',
+    descriptionEn: 'A short animated invitation.',
+    descriptionSv: 'En kort animerad inbjudan.',
     image: ray,
     video: '/examples/ray.mp4',
   },
+  {
+    id: 'moment',
+    nameAr: 'لحظة الزفاف',
+    nameEn: 'The Moment',
+    nameSv: 'The Moment',
+    descriptionAr: 'فيديو بمظروف وزخرفة وشعار.',
+    descriptionEn: 'Envelope, décor, and logo animation.',
+    descriptionSv: 'Kuvert, dekoration och logotypanimation.',
+    image: momentCover,
+    video: '/examples/moment.mp4',
+  },
 ]
+
+export function localizedText(item, language, field) {
+  const key = `${field}${language === 'ar' ? 'Ar' : language === 'sv' ? 'Sv' : 'En'}`
+  return item[key] ?? item[`${field}En`] ?? ''
+}

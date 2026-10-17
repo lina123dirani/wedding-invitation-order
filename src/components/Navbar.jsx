@@ -7,7 +7,7 @@ import { whatsappLink } from '../utils/whatsapp'
 import './Navbar.css'
 
 function Navbar() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -41,13 +41,14 @@ function Navbar() {
         <nav className="navbar__links" aria-label="Primary">
           <a href="#top">{t('nav.home')}</a>
           <a href="#designs">{t('nav.designs')}</a>
+          <a href="#pricing">{t('nav.pricing')}</a>
           <a href="#how-it-works">{t('nav.howItWorks')}</a>
         </nav>
 
         <div className="navbar__actions">
           <LanguageSwitcher />
           <Button
-            href={whatsappLink(t('whatsapp.message'))}
+            href={whatsappLink(t('whatsapp.message'), language)}
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__cta btn--full-mobile"
@@ -81,6 +82,9 @@ function Navbar() {
           <a href="#designs" onClick={closeMenu}>
             {t('nav.designs')}
           </a>
+          <a href="#pricing" onClick={closeMenu}>
+            {t('nav.pricing')}
+          </a>
           <a href="#how-it-works" onClick={closeMenu}>
             {t('nav.howItWorks')}
           </a>
@@ -88,7 +92,7 @@ function Navbar() {
         <div className="navbar__mobile-footer">
           <LanguageSwitcher />
           <Button
-            href={whatsappLink(t('whatsapp.message'))}
+            href={whatsappLink(t('whatsapp.message'), language)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn--full-mobile"

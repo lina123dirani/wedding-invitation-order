@@ -19,6 +19,7 @@ function Footer() {
         <nav className="site-footer__nav" aria-label="Footer">
           <a href="#top">{t('footer.home')}</a>
           <a href="#designs">{t('footer.designs')}</a>
+          <a href="#pricing">{t('footer.pricing')}</a>
           <a href="#how-it-works">{t('footer.howItWorks')}</a>
         </nav>
 

@@ -1,13 +1,14 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { translations } from './translations'
 
-const STORAGE_KEY = 'maison-invite-lang'
+const STORAGE_KEY = 'thread-vow-lang'
+const SUPPORTED = ['ar', 'en', 'sv']
 const LanguageContext = createContext(null)
 
 function getInitialLanguage() {
   if (typeof window === 'undefined') return 'ar'
   const saved = window.localStorage.getItem(STORAGE_KEY)
-  if (saved === 'ar' || saved === 'en') return saved
+  if (SUPPORTED.includes(saved)) return saved
   return 'ar'
 }
 
@@ -23,7 +24,7 @@ export function LanguageProvider({ children }) {
 
   const value = useMemo(() => {
     function setLanguage(next) {
-      if (next !== 'ar' && next !== 'en') return
+      if (!SUPPORTED.includes(next)) return
       setLanguageState(next)
     }
 

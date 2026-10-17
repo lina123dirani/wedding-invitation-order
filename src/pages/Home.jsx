@@ -4,6 +4,7 @@ import Hero from '../components/home/Hero'
 import Editorial from '../components/home/Editorial'
 import Signature from '../components/home/Signature'
 import FeaturedDesigns from '../components/home/FeaturedDesigns'
+import Pricing from '../components/home/Pricing'
 import HowItWorks from '../components/home/HowItWorks'
 import HomeCta from '../components/home/HomeCta'
 import './Home.css'
@@ -17,6 +18,7 @@ function Home() {
         <Editorial />
         <Signature />
         <FeaturedDesigns />
+        <Pricing />
         <HowItWorks />
         <HomeCta />
       </main>

@@ -5,7 +5,7 @@ import { whatsappLink } from '../../utils/whatsapp'
 import './HomeCta.css'
 
 function HomeCta() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <section id="cta" className="section home-cta" aria-labelledby="cta-title">
@@ -14,7 +14,7 @@ function HomeCta() {
           {t('cta.title')}
         </h2>
         <Button
-          href={whatsappLink(t('whatsapp.message'))}
+          href={whatsappLink(t('whatsapp.message'), language)}
           target="_blank"
           rel="noopener noreferrer"
           className="btn--full-mobile btn--glow"

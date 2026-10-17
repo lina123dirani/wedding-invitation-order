@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import Button from './Button'
 import VideoModal from './VideoModal'
+import { localizedText } from '../data/invitations'
 import { useLanguage } from '../i18n/LanguageContext'
 import './DesignCard.css'
 
 function DesignCard({ invitation, detailsLabel }) {
   const { language } = useLanguage()
   const [videoOpen, setVideoOpen] = useState(false)
-  const name = language === 'ar' ? invitation.nameAr : invitation.nameEn
-  const description =
-    language === 'ar' ? invitation.descriptionAr : invitation.descriptionEn
+  const name = localizedText(invitation, language, 'name')
+  const description = localizedText(invitation, language, 'description')
   const isVideo = Boolean(invitation.video)
 
   return (
@@ -22,6 +22,9 @@ function DesignCard({ invitation, detailsLabel }) {
           aria-label={detailsLabel}
         >
           <img src={invitation.image} alt={name} className="design-card__image" />
+          <span className="design-card__play" aria-hidden="true">
+            ▶
+          </span>
         </button>
       ) : (
         <a

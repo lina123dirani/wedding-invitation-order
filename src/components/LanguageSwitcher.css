@@ -1,7 +1,14 @@
 .lang-switcher {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+
+.lang-switcher__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .lang-switcher__btn {

@@ -5,7 +5,7 @@ import { whatsappLink } from '../../utils/whatsapp'
 import './Hero.css'
 
 function Hero() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <section className="hero" aria-labelledby="hero-title">
@@ -18,7 +18,7 @@ function Hero() {
           <p className="hero__subtitle reveal reveal-delay-2">{t('hero.subtitle')}</p>
           <div className="hero__actions reveal reveal-delay-3">
             <Button
-              href={whatsappLink(t('whatsapp.message'))}
+              href={whatsappLink(t('whatsapp.message'), language)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn--full-mobile btn--glow"
