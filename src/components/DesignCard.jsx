@@ -21,7 +21,13 @@ function DesignCard({ invitation, detailsLabel }) {
           onClick={() => setVideoOpen(true)}
           aria-label={detailsLabel}
         >
-          <img src={invitation.image} alt={name} className="design-card__image" />
+          <img
+            src={invitation.image}
+            alt={name}
+            className="design-card__image"
+            loading="lazy"
+            decoding="async"
+          />
           <span className="design-card__play" aria-hidden="true">
             ▶
           </span>
@@ -34,7 +40,13 @@ function DesignCard({ invitation, detailsLabel }) {
           rel="noopener noreferrer"
           aria-label={detailsLabel}
         >
-          <img src={invitation.image} alt={name} className="design-card__image" />
+          <img
+            src={invitation.image}
+            alt={name}
+            className="design-card__image"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
       )}
 
