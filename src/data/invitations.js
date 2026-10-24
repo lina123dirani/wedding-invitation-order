@@ -42,7 +42,7 @@ export const heirloomExamples = [
   },
   {
     id: 'birth-blessing',
-    nameAr: 'بركة الولادة',
+    nameAr: 'مباركة الولادة',
     nameEn: 'Birth Blessing',
     nameSv: 'Birth Blessing',
     descriptionAr: 'دعوة تفاعلية لفرحة قدوم مولودة.',
