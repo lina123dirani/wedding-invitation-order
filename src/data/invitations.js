@@ -1,8 +1,10 @@
 import blossom from '../assets/examples/blossom.jpg'
 import classic from '../assets/examples/classic.jpg'
 import arch from '../assets/examples/arch.jpg'
+import birthBlessing from '../assets/examples/birth-blessing.png'
 import ray from '../assets/examples/ray.jpg'
 import birthdayCover from '../assets/examples/birthday-cover.png'
+import weddingCover from '../assets/examples/wedding-cover.png'
 
 export const heirloomExamples = [
   {
@@ -38,6 +40,17 @@ export const heirloomExamples = [
     image: arch,
     href: 'https://wedding-invitation-eight-delta-92.vercel.app/',
   },
+  {
+    id: 'birth-blessing',
+    nameAr: 'بركة الولادة',
+    nameEn: 'Birth Blessing',
+    nameSv: 'Birth Blessing',
+    descriptionAr: 'دعوة تفاعلية لفرحة قدوم مولودة.',
+    descriptionEn: 'An interactive invitation for a baby blessing.',
+    descriptionSv: 'En interaktiv inbjudan till en babylvälsignelse.',
+    image: birthBlessing,
+    href: 'https://baby-shower-invitation-self.vercel.app/',
+  },
 ]
 
 export const momentExamples = [
@@ -62,6 +75,17 @@ export const momentExamples = [
     descriptionSv: 'En elegant animerad födelsedagsinbjudan.',
     image: birthdayCover,
     video: '/examples/moment.mp4',
+  },
+  {
+    id: 'wedding-moment',
+    nameAr: 'دعوة زفاف',
+    nameEn: 'Wedding Invitation',
+    nameSv: 'Bröllopsinbjudan',
+    descriptionAr: 'دعوة زفاف متحركة أنيقة.',
+    descriptionEn: 'An elegant animated wedding invitation.',
+    descriptionSv: 'En elegant animerad bröllopsinbjudan.',
+    image: weddingCover,
+    video: '/examples/wedding-moment.mp4',
   },
 ]
 
