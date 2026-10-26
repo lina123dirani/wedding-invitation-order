@@ -235,7 +235,7 @@ export const translations = {
     },
   },
   sv: {
-    brand: 'THREAD & VOW Studio',
+    brand: 'Dua & Design',
     nav: {
       home: 'Hem',
       designs: 'Designs',
@@ -252,7 +252,7 @@ export const translations = {
     },
     whatsapp: {
       message:
-        'Hej! Jag vill beställa en bröllopsinbjudan från THREAD & VOW Studio.',
+        'Hej! Jag vill beställa en bröllopsinbjudan från Dua & Design.',
     },
     hero: {
       title: 'Er berättelse börjar här',
@@ -260,7 +260,7 @@ export const translations = {
         'En inbjudan formad kring er stil, er dag och er historia.',
       primaryCta: 'Skapa er inbjudan',
       secondaryCta: 'Utforska designs',
-      productAlt: 'Lyxig bröllopsinbjudan från THREAD & VOW Studio',
+      productAlt: 'Lyxig bröllopsinbjudan från Dua & Design',
     },
     editorial: {
       eyebrow: 'Studion',
@@ -272,7 +272,7 @@ export const translations = {
       title: 'Detaljer man känner innan man läser',
       body: 'Från lacksigill till fina dekorationer — gjort för att bli ett minne.',
       cta: 'Beställ er design',
-      imageAlt: 'THREAD & VOW Studio inbjudningskort',
+      imageAlt: 'Dua & Design inbjudningskort',
     },
     featured: {
       eyebrow: 'Exempel',
