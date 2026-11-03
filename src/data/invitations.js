@@ -2,6 +2,7 @@ import blossom from '../assets/examples/blossom.jpg'
 import classic from '../assets/examples/classic.jpg'
 import arch from '../assets/examples/arch.jpg'
 import birthBlessing from '../assets/examples/birth-blessing.png'
+import liveEvent from '../assets/examples/live-event.jpg'
 import ray from '../assets/examples/ray.jpg'
 import birthdayCover from '../assets/examples/birthday-cover.png'
 import weddingCover from '../assets/examples/wedding-cover.png'
@@ -50,6 +51,17 @@ export const heirloomExamples = [
     descriptionSv: 'En interaktiv inbjudan till en babylvälsignelse.',
     image: birthBlessing,
     href: 'https://baby-shower-invitation-self.vercel.app/',
+  },
+  {
+    id: 'live-event',
+    nameAr: 'معرض فني حي',
+    nameEn: 'Live Event Art Exhibition',
+    nameSv: 'Live Event Art Exhibition',
+    descriptionAr: 'دعوة تفاعلية لمعرض فني حصري.',
+    descriptionEn: 'An interactive invitation for an exclusive art exhibition.',
+    descriptionSv: 'En interaktiv inbjudan till en exklusiv konstutställning.',
+    image: liveEvent,
+    href: 'https://eventinvitation-sage.vercel.app/',
   },
 ]
 
